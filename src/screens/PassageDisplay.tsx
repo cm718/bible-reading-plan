@@ -1,20 +1,58 @@
 // PassageDisplay.js
 import React, { useEffect, useState } from 'react';
 
-const PassageDisplay = ({ translation, passage }) => {
-    const [text, setText] = useState('');
+type Verse = {
+    type: string;
+    number: number;
+    content: string[]
+}
 
+type Footnote = {
+    caller: string;
+    noteId: number
+    reference: { chapter: number, verse: number }
+    text: string
+}
+
+const PassageDisplay = ({ translation = "eng_kjv", book = "PRO", chapterNum = 1 }) => {
+    const [chapterContent, setChapterContent] = useState([])
+    const [bookName, setBookName] = useState("")
+    const [isExpanded, setIsExpanded] = useState(true)
+    const [footnotes, setFootnotes] = useState([]);
+
+    // Get Genesis 1 from the BSB translation
     useEffect(() => {
-        fetch(`https://bible.helloao.org/api/bible/${translation}/${passage}`)
-            .then(response => response.json())
-            .then(data => setText(data.text))
-            .catch(error => console.error('Error fetching passage:', error));
-    }, [translation, passage]);
+        fetch(`https://bible.helloao.org/api/${translation}/${book.toUpperCase()}/${chapterNum}.json`)
+            .then(request => request.json())
+            .then(data => {
+                setChapterContent(data.chapter.content)
+                setBookName(data.book.name)
+                setFootnotes(data.chapter.footnotes)
+                console.log('The DATA:', data);
+                console.log("Chapter Content: ", chapterContent)
+                console.log("Footnotes: ", data.chapter.footnotes)
+            });
+    }, [translation, book, chapterNum]);
+
+    const verses = () => chapterContent.map((verse: Verse) => (
+        <div className='verse' key={verse.number}>{verse.number} {verse.content[0]}</div>
+    ));
+
+    const footnoteView = () => footnotes.map((fn: Footnote) => (
+        <div key={fn.noteId}>
+            {fn.caller} {fn.text}
+        </div>
+    ))
 
     return (
         <div>
-            <h3>{passage}</h3>
-            <p>{text}</p>
+            <h3 onClick={() => setIsExpanded(!isExpanded)}>
+                {bookName} {chapterNum}
+            </h3>
+            {isExpanded && <div>{verses()}</div>}
+            {isExpanded && <div className={`footnotes`}>
+                {footnoteView()}
+            </div>}
         </div>
     );
 };

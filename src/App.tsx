@@ -1,14 +1,17 @@
 import React from 'react';
 import PassageDisplay from './screens/PassageDisplay.tsx';
-import ReadingPlan from './screens/ReadingPlan.tsx';
+import BibleApp from './screens/BibleApp.tsx';
+
 
 const App = () => {
   const today = `${new Date().toString().split(" ").slice(1, 3).join(" ")}`
 
   return (
-    <div>
-      <ReadingPlan day={today} passage={"Psalm 110"} />
-      <PassageDisplay translation={"eng_kjv"} passage={"The LORD says to my Lord sit at my right hand until..."} />
+    <div className='main'>
+      <h2>{today}</h2>
+      <BibleApp />
+      <PassageDisplay />
+      <PassageDisplay book='JHN' />
       {/* Add navigation controls to change the day */}
     </div>
   );
