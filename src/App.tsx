@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className='main'>
       <h2>{today}</h2>
-      <BibleApp />
+      {/* <BibleApp /> */}
       <PassageDisplay />
       <PassageDisplay book='JHN' />
       {/* Add navigation controls to change the day */}

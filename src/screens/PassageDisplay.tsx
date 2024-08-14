@@ -20,7 +20,6 @@ const PassageDisplay = ({ translation = "eng_kjv", book = "PRO", chapterNum = 1 
     const [isExpanded, setIsExpanded] = useState(true)
     const [footnotes, setFootnotes] = useState([]);
 
-    // Get Genesis 1 from the BSB translation
     useEffect(() => {
         fetch(`https://bible.helloao.org/api/${translation}/${book.toUpperCase()}/${chapterNum}.json`)
             .then(request => request.json())
@@ -49,10 +48,14 @@ const PassageDisplay = ({ translation = "eng_kjv", book = "PRO", chapterNum = 1 
             <h3 onClick={() => setIsExpanded(!isExpanded)}>
                 {bookName} {chapterNum}
             </h3>
-            {isExpanded && <div>{verses()}</div>}
-            {isExpanded && <div className={`footnotes`}>
-                {footnoteView()}
-            </div>}
+            {isExpanded &&
+                <>
+                    <div>{verses()}</div>
+                    <div className={`footnotes`}>
+                        {footnoteView()}
+                    </div>
+                </>
+            }
         </div>
     );
 };
