@@ -31,7 +31,7 @@ const PassageDisplay = ({ translation = "eng_kjv", book = "PRO", chapterNum = 1 
                 console.log("Chapter Content: ", chapterContent)
                 console.log("Footnotes: ", data.chapter.footnotes)
             });
-    }, [translation, book, chapterNum]);
+    }, [translation, book, chapterNum, chapterContent]);
 
     const verses = () => chapterContent.map((verse: Verse) => (
         <div className='verse' key={verse.number}>{verse.number} {verse.content[0]}</div>
