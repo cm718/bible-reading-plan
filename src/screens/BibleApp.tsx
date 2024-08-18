@@ -30,13 +30,11 @@ const BibleApp = () => {
             <h3 onClick={() => setShowList(!showList)}>The Holy Bible</h3>
             <div style={styles.gridContainer}>
                 {showList && books.map((book: Book) => (
-                    <button
-                        key={book.id}
-                        style={styles.bookButton}
-                        onClick={() => console.log("Book: ", book.commonName)}
-                    >
-                        {book.id}
-                    </button>
+                    <span key={book.id}>
+                        <button style={styles.bookButton} onClick={() => console.log("Book: ", book.commonName)}>
+                            {book.id}
+                        </button>
+                    </span>
                 ))}
             </div>
         </>
