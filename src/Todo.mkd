@@ -1,23 +1,26 @@
 
-[] Fix the icon so it shows up
-[] Add a json file with the Bible Reading Plan
-[] Make logic to pick the correct chapters for the day
-- [] Figure out what to show for Feb 29
-- [] Figure out how to know to break up Psalm 119
+[x] Fix the icon so it shows up
+[/] Add a json file with the Bible Reading Plan
+[ ] Make logic to pick the correct chapters for the day
+- [ ] Figure out what to show for Feb 29
+- [ ] Figure out how to know to break up Psalm 119
 
 
 Bible App
-[] Show a chapter picker when you click on a book of the bible
+[x] Show a book picker
+[ ] Show a chapter picker when you click on a book of the bible
+[ ] Show chapter by appending a chapter component
+
 
 Reformed Standards
-[] WCF
-[] WSC
-[] WLC
-[] Apostle's Creed
-[] Nicene Creed
-[] Athanaisian Creed
-[] Chalcedonian Definition
-[] The Three Forms of Unity: 
+[ ] WCF
+[ ] WSC
+[ ] WLC
+[ ] Apostle's Creed
+[ ] Nicene Creed
+[ ] Athanaisian Creed
+[ ] Chalcedonian Definition
+[ ] The Three Forms of Unity: 
     - The Belgic Confession
     - The Heidelberg Catechism
     - The Canons of the Synod of Dort
