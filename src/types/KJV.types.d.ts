@@ -5,6 +5,19 @@ export interface AvailableTranslations {
     translations: Translation[];
 }
 
+type KjvVerse = {
+    type: string;
+    number: number;
+    content: string[]
+}
+
+type KjvFootnote = {
+    caller: string;
+    noteId: number
+    reference: { chapter: number, verse: number }
+    text: string
+}
+
 interface Translation {
     /**
      * The ID of the translation.
