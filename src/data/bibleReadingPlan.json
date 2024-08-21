@@ -2174,5 +2174,45 @@
             "oldTestament": "Isaiah 47-48",
             "newTestament": "1 Corinthians 8"
         }
+    },
+    "273": {
+        "date": "09-29",
+        "readings": {
+            "psalmsOrProverbs": "Psalm 25",
+            "oldTestament": "Isaiah 49-50",
+            "newTestament": "1 Corinthians 9"
+        }
+    },
+    "274": {
+        "date": "09-30",
+        "readings": {
+            "psalmsOrProverbs": "Psalm 26",
+            "oldTestament": "Isaiah 51-52",
+            "newTestament": "1 Corinthians 10"
+        }
+    },
+    "275": {
+        "date": "10-01",
+        "readings": {
+            "psalmsOrProverbs": "Psalm 27",
+            "oldTestament": "Isaiah 53-54",
+            "newTestament": "1 Corinthians 11"
+        }
+    },
+    "276": {
+        "date": "10-02",
+        "readings": {
+            "psalmsOrProverbs": "Psalm 28",
+            "oldTestament": "Isaiah 55-56",
+            "newTestament": "1 Corinthians 12"
+        }
+    },
+    "277": {
+        "date": "10-03",
+        "readings": {
+            "psalmsOrProverbs": "Psalm 29",
+            "oldTestament": "Isaiah 57-58",
+            "newTestament": "1 Corinthians 13"
+        }
     }
 }

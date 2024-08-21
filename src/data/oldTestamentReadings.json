@@ -1,0 +1,556 @@
+{
+    "01-01": {
+        "book": "GENESIS",
+        "chapters": [
+            1,
+            2
+        ]
+    },
+    "01-02": {
+        "book": "GENESIS",
+        "chapters": [
+            3,
+            4
+        ]
+    },
+    "01-03": {
+        "book": "GENESIS",
+        "chapters": [
+            5,
+            6
+        ]
+    },
+    "01-04": {
+        "book": "GENESIS",
+        "chapters": [
+            7,
+            8
+        ]
+    },
+    "01-05": {
+        "book": "GENESIS",
+        "chapters": [
+            9,
+            10
+        ]
+    },
+    "01-06": {
+        "book": "GENESIS",
+        "chapters": [
+            11,
+            12
+        ]
+    },
+    "01-07": {
+        "book": "GENESIS",
+        "chapters": [
+            13,
+            14
+        ]
+    },
+    "01-08": {
+        "book": "GENESIS",
+        "chapters": [
+            15,
+            16
+        ]
+    },
+    "01-09": {
+        "book": "GENESIS",
+        "chapters": [
+            17,
+            18
+        ]
+    },
+    "01-10": {
+        "book": "GENESIS",
+        "chapters": [
+            19,
+            20
+        ]
+    },
+    "01-11": {
+        "book": "GENESIS",
+        "chapters": [
+            21,
+            22
+        ]
+    },
+    "01-12": {
+        "book": "GENESIS",
+        "chapters": [
+            23,
+            24
+        ]
+    },
+    "01-13": {
+        "book": "GENESIS",
+        "chapters": [
+            25,
+            26
+        ]
+    },
+    "01-14": {
+        "book": "GENESIS",
+        "chapters": [
+            27,
+            28
+        ]
+    },
+    "01-15": {
+        "book": "GENESIS",
+        "chapters": [
+            29,
+            30
+        ]
+    },
+    "01-16": {
+        "book": "GENESIS",
+        "chapters": [
+            31,
+            32
+        ]
+    },
+    "01-17": {
+        "book": "GENESIS",
+        "chapters": [
+            33,
+            34
+        ]
+    },
+    "01-18": {
+        "book": "GENESIS",
+        "chapters": [
+            35,
+            36
+        ]
+    },
+    "01-19": {
+        "book": "GENESIS",
+        "chapters": [
+            37,
+            38
+        ]
+    },
+    "01-20": {
+        "book": "GENESIS",
+        "chapters": [
+            39,
+            40
+        ]
+    },
+    "01-21": {
+        "book": "GENESIS",
+        "chapters": [
+            41,
+            42
+        ]
+    },
+    "01-22": {
+        "book": "GENESIS",
+        "chapters": [
+            43,
+            44
+        ]
+    },
+    "01-23": {
+        "book": "GENESIS",
+        "chapters": [
+            45,
+            46
+        ]
+    },
+    "01-24": {
+        "book": "GENESIS",
+        "chapters": [
+            47,
+            48
+        ]
+    },
+    "01-25": {
+        "book": "GENESIS",
+        "chapters": [
+            49,
+            50
+        ]
+    },
+    "01-26": {
+        "book": "EXODUS",
+        "chapters": [
+            1,
+            2
+        ]
+    },
+    "01-27": {
+        "book": "EXODUS",
+        "chapters": [
+            3,
+            4
+        ]
+    },
+    "01-28": {
+        "book": "EXODUS",
+        "chapters": [
+            5,
+            6
+        ]
+    },
+    "01-29": {
+        "book": "EXODUS",
+        "chapters": [
+            7,
+            8
+        ]
+    },
+    "01-30": {
+        "book": "EXODUS",
+        "chapters": [
+            9,
+            10
+        ]
+    },
+    "01-31": {
+        "book": "EXODUS",
+        "chapters": [
+            11,
+            12
+        ]
+    },
+    "02-01": {
+        "book": "EXODUS",
+        "chapters": [
+            13,
+            14
+        ]
+    },
+    "02-02": {
+        "book": "EXODUS",
+        "chapters": [
+            15,
+            16
+        ]
+    },
+    "02-03": {
+        "book": "EXODUS",
+        "chapters": [
+            17,
+            18
+        ]
+    },
+    "02-04": {
+        "book": "EXODUS",
+        "chapters": [
+            19,
+            20
+        ]
+    },
+    "02-05": {
+        "book": "EXODUS",
+        "chapters": [
+            21,
+            22
+        ]
+    },
+    "02-06": {
+        "book": "EXODUS",
+        "chapters": [
+            23,
+            24
+        ]
+    },
+    "02-07": {
+        "book": "EXODUS",
+        "chapters": [
+            25,
+            26
+        ]
+    },
+    "02-08": {
+        "book": "EXODUS",
+        "chapters": [
+            27,
+            28
+        ]
+    },
+    "02-09": {
+        "book": "EXODUS",
+        "chapters": [
+            29,
+            30
+        ]
+    },
+    "02-10": {
+        "book": "EXODUS",
+        "chapters": [
+            31,
+            32
+        ]
+    },
+    "02-11": {
+        "book": "EXODUS",
+        "chapters": [
+            33,
+            34
+        ]
+    },
+    "02-12": {
+        "book": "EXODUS",
+        "chapters": [
+            35,
+            36
+        ]
+    },
+    "02-13": {
+        "book": "EXODUS",
+        "chapters": [
+            37,
+            38
+        ]
+    },
+    "02-14": {
+        "book": "EXODUS",
+        "chapters": [
+            39,
+            40
+        ]
+    },
+    "02-15": {
+        "book": "LEVITICUS",
+        "chapters": [
+            1,
+            2,
+            3
+        ]
+    },
+    "02-16": {
+        "book": "LEVITICUS",
+        "chapters": [
+            4,
+            5
+        ]
+    },
+    "02-17": {
+        "book": "LEVITICUS",
+        "chapters": [
+            6,
+            7
+        ]
+    },
+    "02-18": {
+        "book": "LEVITICUS",
+        "chapters": [
+            8,
+            9
+        ]
+    },
+    "02-19": {
+        "book": "LEVITICUS",
+        "chapters": [
+            10,
+            11
+        ]
+    },
+    "02-20": {
+        "book": "LEVITICUS",
+        "chapters": [
+            12,
+            13
+        ]
+    },
+    "02-21": {
+        "book": "LEVITICUS",
+        "chapters": [
+            14,
+            15
+        ]
+    },
+    "02-22": {
+        "book": "LEVITICUS",
+        "chapters": [
+            16,
+            17
+        ]
+    },
+    "02-23": {
+        "book": "LEVITICUS",
+        "chapters": [
+            18,
+            19
+        ]
+    },
+    "02-24": {
+        "book": "LEVITICUS",
+        "chapters": [
+            20,
+            21
+        ]
+    },
+    "02-25": {
+        "book": "LEVITICUS",
+        "chapters": [
+            22,
+            23
+        ]
+    },
+    "02-26": {
+        "book": "LEVITICUS",
+        "chapters": [
+            24,
+            25
+        ]
+    },
+    "02-27": {
+        "book": "LEVITICUS",
+        "chapters": [
+            26,
+            27
+        ]
+    },
+    "02-28": {
+        "book": "NUMBERS",
+        "chapters": [
+            1,
+            2
+        ]
+    },
+    "03-01": {
+        "book": "NUMBERS",
+        "chapters": [
+            3,
+            4
+        ]
+    },
+    "03-02": {
+        "book": "NUMBERS",
+        "chapters": [
+            5,
+            6
+        ]
+    },
+    "03-03": {
+        "book": "NUMBERS",
+        "chapters": [
+            7,
+            8
+        ]
+    },
+    "03-04": {
+        "book": "NUMBERS",
+        "chapters": [
+            9,
+            10
+        ]
+    },
+    "03-05": {
+        "book": "NUMBERS",
+        "chapters": [
+            11,
+            12
+        ]
+    },
+    "03-06": {
+        "book": "NUMBERS",
+        "chapters": [
+            13,
+            14
+        ]
+    },
+    "03-07": {
+        "book": "NUMBERS",
+        "chapters": [
+            15,
+            16
+        ]
+    },
+    "03-08": {
+        "book": "NUMBERS",
+        "chapters": [
+            17,
+            18
+        ]
+    },
+    "03-09": {
+        "book": "NUMBERS",
+        "chapters": [
+            19,
+            20
+        ]
+    },
+    "03-10": {
+        "book": "NUMBERS",
+        "chapters": [
+            21,
+            22
+        ]
+    },
+    "03-11": {
+        "book": "NUMBERS",
+        "chapters": [
+            23,
+            24
+        ]
+    },
+    "03-12": {
+        "book": "NUMBERS",
+        "chapters": [
+            25,
+            26
+        ]
+    },
+    "03-13": {
+        "book": "NUMBERS",
+        "chapters": [
+            27,
+            28
+        ]
+    },
+    "03-14": {
+        "book": "NUMBERS",
+        "chapters": [
+            29,
+            30
+        ]
+    },
+    "03-15": {
+        "book": "NUMBERS",
+        "chapters": [
+            31,
+            32
+        ]
+    },
+    "03-16": {
+        "book": "NUMBERS",
+        "chapters": [
+            33,
+            34
+        ]
+    },
+    "03-17": {
+        "book": "NUMBERS",
+        "chapters": [
+            35,
+            36
+        ]
+    },
+    "03-18": {
+        "book": "DEUTERONOMY",
+        "chapters": [
+            1,
+            2
+        ]
+    },
+    "03-19": {
+        "book": "NUMBERS",
+        "chapters": [
+            3,
+            4
+        ]
+    },
+    "03-20": {
+        "book": "NUMBERS",
+        "chapters": [
+            5,
+            6
+        ]
+    }
+}
