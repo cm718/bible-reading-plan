@@ -16,15 +16,6 @@ const BibleApp = () => {
     const [books, setBooks] = useState([])
     const [showList, setShowList] = useState(false)
 
-    useEffect(() => {
-        fetch(`https://bible.helloao.org/api/eng_kjv/books.json`)
-            .then(request => request.json())
-            .then(data => {
-                console.log(data);
-                setBooks(data.books)
-            });
-    }, [])
-
     return (
         <>
             <h3 onClick={() => setShowList(!showList)}>The Holy Bible</h3>

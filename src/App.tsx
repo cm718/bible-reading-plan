@@ -1,26 +1,65 @@
-import React from 'react';
-import NkjvChapterView from './screens/NkjvChapterView.tsx';
-import getDayOfYear from './utils/getDayOfYear.ts'
-import readingPlan from './data/bibleReadingPlan.json'
+import React, { useState } from 'react';
+import { getReadingsForToday } from './services/NewBibleService';
 
-const App = () => {
-  const today = `${new Date().toString().split(" ").slice(1, 3).join(" ")}`
+const App: React.FC = () => {
+  const { family, secret } = getReadingsForToday();
 
-  const dayOfTheYear = getDayOfYear(new Date);
-  const todayPlan = readingPlan[dayOfTheYear];
-  const [wisBook, wisChapter] = todayPlan.readings.psalmsOrProverbs.split(" ")
-  const [ntBook, ntChapter] = todayPlan.readings.newTestament.split(" ")
-  const [otBook, otChapters] = todayPlan.readings.oldTestament.split(" ")
-  const firstOT = otChapters.split("-")[0];
-  const secondOT = otChapters.split("-")[1];
+  const [expandedFamily, setExpandedFamily] = useState<number[]>([]); // Expanded family passages
+  const [expandedSecret, setExpandedSecret] = useState<number[]>([]); // Expanded secret passages
+
+    const toggleFamilyPassage = (index: number) => {
+        setExpandedFamily(prev => {
+            if (prev.includes(index)) {
+                return prev.filter(i => i !== index); // Collapse
+            } else {
+                return [...prev, index]; // Expand
+            }
+        });
+    };
+
+    const toggleSecretPassage = (index: number) => {
+        setExpandedSecret(prev => {
+            if (prev.includes(index)) {
+                return prev.filter(i => i !== index); // Collapse
+            } else {
+                return [...prev, index]; // Expand
+            }
+        });
+    };
 
   return (
-    <div className='main'>
-      <h2>{today}</h2>
-      <NkjvChapterView book={wisBook} chapterNum={wisChapter} />
-      <NkjvChapterView book={otBook} chapterNum={firstOT} />
-      <NkjvChapterView book={otBook} chapterNum={secondOT} />
-      <NkjvChapterView book={ntBook} chapterNum={ntChapter} />
+    <div>
+      <h1>Daily Bible Readings</h1>
+
+      <h2>Private Readings</h2>
+      <div>
+        {secret.map((reading, index) => (
+          <div key={index}>
+            <h3 onClick={() => toggleSecretPassage(index)}>{`${reading.book} ${reading.chapter}`}</h3>
+            {expandedSecret.includes(index) && <div>
+            {reading.verses.map((verse, verseIndex) => (
+                <p key={verseIndex}>{`${verse.num} ${verse.text}`}</p>
+              ))}
+            </div>}
+          </div>
+        ))}
+      </div>
+      
+      <h2>Family Readings</h2>
+      <div>
+        {family.map((reading, index) => (
+          <div key={index}>
+            <h3 onClick={() => toggleFamilyPassage(index+200)}>
+              {`${reading.book} ${reading.chapter}`}
+            </h3>
+            {expandedFamily.includes(index+200) && <div>
+              {reading.verses.map((verse, verseIndex) => (
+                <p key={verseIndex}>{`${verse.num} ${verse.text}`}</p>
+              ))}
+            </div>}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
