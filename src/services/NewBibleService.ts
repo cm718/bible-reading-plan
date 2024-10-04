@@ -63,17 +63,13 @@ export const getReadingsForToday = () => {
     
     const passages = allReadings.flatMap(reading => {
         const parsedChapters = parseChapters(reading); // Parse reading to get chapters
-        console.log("ALL READINGS: ", parsedChapters);
 
         return parsedChapters.map(({ book, chapter }) => {
             const bookData = (nkjvData as NKJV).books.find((b: any) => b.name.toLowerCase() === book.toLowerCase());
 
-            if (!bookData) return null;
-            console.log('book data: ', bookData);
-            
+            if (!bookData) return null;            
 
-            const chapterData = bookData.chapters[+chapter-1]
-            console.log('chp data: ', chapterData);
+            const chapterData = bookData.chapters[+chapter-1];
 
             return {
                 book: bookData.name,
@@ -91,8 +87,6 @@ const isPassageInPlan = (planEntry: string, passage: { book: string; chapter: st
     // Extract the book and the chapter range
     const planBook = planEntry.substring(0, lastSpaceIndex).trim();
     const planChapterRange = planEntry.substring(lastSpaceIndex + 1).trim();
-
-    console.log(`Checking planEntry: ${planEntry} -> planBook: ${planBook}, planChapterRange: ${planChapterRange}, passage: ${passage.book} ${passage.chapter}`);
 
     if (planBook.toLowerCase() === passage.book.toLowerCase()) {
         if (planChapterRange.includes('-')) {
