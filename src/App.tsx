@@ -23,7 +23,10 @@ const App: React.FC = () => {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>Artos</h1>
+        <div className="header-content">
+          <i className="fas fa-book-open"></i> {/* Open Book icon */}
+          <h1>Artos</h1>
+        </div>
       </header>
 
       <section className="readings-section">

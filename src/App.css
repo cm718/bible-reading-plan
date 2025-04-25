@@ -18,22 +18,43 @@ body {
   background-color: #2a2a2a; /* Slightly lighter dark background for contrast */
   border-radius: 16px; /* Softer edges */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  padding-top: 80px; /* Adjust based on header height */
 }
 
 /* Header Styles */
 .app-header {
+  position: fixed; /* Fix the header at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1a1a1a; /* Dark background */
+  z-index: 1000; /* Ensure it stays above other content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  padding: 10px 0;
   text-align: center;
-  margin-bottom: 30px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between icon and text */
 }
 
 .app-header h1 {
   font-family: 'Merriweather', serif; /* Serif font for elegance */
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #d4af37; /* Gold accent */
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+  margin: 0;
+}
+
+.app-header i {
+  font-size: 2rem; /* Slightly larger for emphasis */
+  color: #d4af37; /* Gold accent for the icon */
+  margin-right: 6px; /* Add spacing between the icon and the text */
 }
 
 /* Section Styles */
@@ -46,7 +67,7 @@ body {
   font-size: 2rem;
   color: #d4af37; /* Gold accent */
   margin-bottom: 20px;
-  border-bottom: 2px solid #d4af37; /* Underline effect */
+  /* border-bottom: 2px solid #d4af37; Underline effect */
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -73,7 +94,7 @@ body {
 .reading-title {
   font-size: 1.4rem;
   font-family: 'Roboto', sans-serif; /* Sans-serif for readability */
-  color: #eae7dc; /* Light cream text */
+  color: #f5f5dc; /* Cream text for verses */
   cursor: pointer;
   margin: 0;
   font-weight: bold;
