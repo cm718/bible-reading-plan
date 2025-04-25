@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Sans-serif for body text */
+  background-color: #1a1a1a; /* Dark charcoal background */
+  color: #eae7dc; /* Light cream text */
+  line-height: 1.8;
+}
+
+.app-wrapper {
+  margin-bottom: 20px; /* Add margin to the bottom of the app */
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #2a2a2a; /* Slightly lighter dark background for contrast */
+  border-radius: 16px; /* Softer edges */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+/* Header Styles */
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.app-header h1 {
+  font-family: 'Merriweather', serif; /* Serif font for elegance */
+  font-size: 3rem;
+  color: #d4af37; /* Gold accent */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+}
+
+/* Section Styles */
+.readings-section {
+  margin-bottom: 40px;
+}
+
+.readings-section h2 {
+  font-family: 'Merriweather', serif; /* Serif font for section titles */
+  font-size: 2rem;
+  color: #d4af37; /* Gold accent */
+  margin-bottom: 20px;
+  border-bottom: 2px solid #d4af37; /* Underline effect */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Reading List Styles */
+.readings-list {
+  padding-left: 0;
+}
+
+.reading-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #3a3a3a; /* Subtle border for cards */
+  border-radius: 12px; /* Softer edges */
+  background-color: #2a2a2a; /* Match container background */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+}
+
+.reading-item:hover {
+  transform: translateY(-3px); /* Subtle lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
+}
+
+.reading-title {
+  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif; /* Sans-serif for readability */
+  color: #eae7dc; /* Light cream text */
+  cursor: pointer;
+  margin: 0;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.reading-title:hover {
+  color: #d4af37; /* Gold accent on hover */
+}
+
+/* Verse Styles */
+.verses {
+  margin-top: 15px;
+  padding-left: 20px;
+  border-left: 3px solid #d4af37; /* Gold vertical line */
+}
+
+.verse {
+  font-size: 1.1rem;
+  font-family: 'Roboto', sans-serif; /* Sans-serif for body text */
+  line-height: 1.6;
+  margin: 8px 0;
+  color: #f5f5dc; /* Cream text for verses */
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #888; /* Muted gray for footer text */
+}

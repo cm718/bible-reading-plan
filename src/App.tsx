@@ -1,65 +1,80 @@
 import React, { useState } from 'react';
 import { getReadingsForToday } from './services/NewBibleService';
+import './App.css';
 
 const App: React.FC = () => {
   const { family, secret } = getReadingsForToday();
 
-  const [expandedFamily, setExpandedFamily] = useState<number[]>([]); // Expanded family passages
-  const [expandedSecret, setExpandedSecret] = useState<number[]>([]); // Expanded secret passages
+  const [expandedFamily, setExpandedFamily] = useState<number[]>([]);
+  const [expandedSecret, setExpandedSecret] = useState<number[]>([]);
 
-    const toggleFamilyPassage = (index: number) => {
-        setExpandedFamily(prev => {
-            if (prev.includes(index)) {
-                return prev.filter(i => i !== index); // Collapse
-            } else {
-                return [...prev, index]; // Expand
-            }
-        });
-    };
+  const toggleFamilyPassage = (index: number) => {
+    setExpandedFamily((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+    );
+  };
 
-    const toggleSecretPassage = (index: number) => {
-        setExpandedSecret(prev => {
-            if (prev.includes(index)) {
-                return prev.filter(i => i !== index); // Collapse
-            } else {
-                return [...prev, index]; // Expand
-            }
-        });
-    };
+  const toggleSecretPassage = (index: number) => {
+    setExpandedSecret((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+    );
+  };
 
   return (
-    <div>
-      <h1>Daily Bible Readings</h1>
+    <div className="app-container">
+      <header className="app-header">
+        <h1>Artos</h1>
+      </header>
 
-      <h2>Private Readings</h2>
-      <div>
-        {secret.map((reading, index) => (
-          <div key={index}>
-            <h3 onClick={() => toggleSecretPassage(index)}>{`${reading.book} ${reading.chapter}`}</h3>
-            {expandedSecret.includes(index) && <div>
-            {reading.verses.map((verse, verseIndex) => (
-                <p key={verseIndex}>{`${verse.num} ${verse.text}`}</p>
-              ))}
-            </div>}
-          </div>
-        ))}
-      </div>
-      
-      <h2>Family Readings</h2>
-      <div>
-        {family.map((reading, index) => (
-          <div key={index}>
-            <h3 onClick={() => toggleFamilyPassage(index+200)}>
-              {`${reading.book} ${reading.chapter}`}
-            </h3>
-            {expandedFamily.includes(index+200) && <div>
-              {reading.verses.map((verse, verseIndex) => (
-                <p key={verseIndex}>{`${verse.num} ${verse.text}`}</p>
-              ))}
-            </div>}
-          </div>
-        ))}
-      </div>
+      <section className="readings-section">
+        <h2>Private Readings</h2>
+        <div className="readings-list">
+          {secret.map((reading, index) => (
+            <div key={index} className="reading-item">
+              <h3
+                className="reading-title"
+                onClick={() => toggleSecretPassage(index)}
+              >
+                {`${reading.book} ${reading.chapter}`}
+              </h3>
+              {expandedSecret.includes(index) && (
+                <div className="verses">
+                  {reading.verses.map((verse, verseIndex) => (
+                    <p key={verseIndex} className="verse">
+                      {`${verse.num} ${verse.text}`}
+                    </p>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="readings-section">
+        <h2>Family Readings</h2>
+        <div className="readings-list">
+          {family.map((reading, index) => (
+            <div key={index} className="reading-item">
+              <h3
+                className="reading-title"
+                onClick={() => toggleFamilyPassage(index + 200)}
+              >
+                {`${reading.book} ${reading.chapter}`}
+              </h3>
+              {expandedFamily.includes(index + 200) && (
+                <div className="verses">
+                  {reading.verses.map((verse, verseIndex) => (
+                    <p key={verseIndex} className="verse">
+                      {`${verse.num} ${verse.text}`}
+                    </p>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 };
