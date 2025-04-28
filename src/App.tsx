@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { getReadingsForToday } from './services/NewBibleService';
 import './App.css';
+import Header from './components/Header';
 
 const App: React.FC = () => {
   const { family, secret } = getReadingsForToday();
@@ -22,13 +23,7 @@ const App: React.FC = () => {
 
   return (
     <div className="app-container">
-      <header className="app-header">
-        <div className="header-content">
-          <i className="fas fa-book-open"></i> {/* Open Book icon */}
-          <h1>Artos</h1>
-        </div>
-      </header>
-
+      <Header />
       <section className="readings-section">
         <h2>Private Readings</h2>
         <div className="readings-list">
