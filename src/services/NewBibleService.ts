@@ -65,18 +65,19 @@ export const getReadingsForToday = () => {
         const parsedChapters = parseChapters(reading); // Parse reading to get chapters
 
         return parsedChapters.map(({ book, chapter }) => {
-            const bookData = (nkjvData as NKJV).books.find((b: any) => b.name.toLowerCase() === book.toLowerCase());
+            const normalizedBookName = normalizeBookName(book);
+            const bookData = (nkjvData as NKJV).books.find((b: any) => b.name.toLowerCase() === normalizedBookName);
 
             if (!bookData) return null;            
 
             const chapterData = bookData.chapters[+chapter-1];
 
             return {
-                book: bookData.name,
-                chapter: chapter,
+                book,
+                chapter,
                 verses: chapterData.verses,
             };
-        })//.filter(Boolean); // Filter out any null values
+        }).filter(Boolean); // Filter out any null values
     });
 
 // Helper function to check if a passage matches a chapter or falls within a chapter range
@@ -114,3 +115,11 @@ const isPassageInPlan = (planEntry: string, passage: { book: string; chapter: st
     ),
   };
 };
+
+function normalizeBookName(book: string) {
+    let lowerBookName = book.toLowerCase();
+    if (lowerBookName === 'song of songs') {
+        lowerBookName = 'song of solomon';
+    }
+    return lowerBookName;
+}
