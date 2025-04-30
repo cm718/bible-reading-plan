@@ -22,7 +22,9 @@ body {
 }
 
 .app-header {
-  position: sticky;
+  height: 150px; /* larger than needed */
+  overflow: hidden;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
