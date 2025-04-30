@@ -22,13 +22,11 @@ body {
 }
 
 .app-header {
-  height: 150px; /* larger than needed */
-  overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  /* height: calc(60px + env(safe-area-inset-top)); */
+  height: calc(60px + env(safe-area-inset-top));
   padding-top: env(safe-area-inset-top); /* Add padding for the safe area */
   background-color: #1a1a1a;
   z-index: 1000;
