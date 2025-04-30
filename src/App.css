@@ -1,4 +1,11 @@
 /* General Styles */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding-top: env(safe-area-inset-top);
+  padding-top: constant(safe-area-inset-top); /* for older iOS */
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif; /* Sans-serif for body text */
@@ -9,6 +16,9 @@ body {
 
 .app-wrapper {
   margin-bottom: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-container {
