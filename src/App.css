@@ -8,7 +8,7 @@ body {
 }
 
 .app-wrapper {
-  margin-bottom: 20px; /* Add margin to the bottom of the app */
+  margin-bottom: 20px;
 }
 
 .app-container {
@@ -21,18 +21,17 @@ body {
   padding-top: 80px; /* Adjust based on header height */
 }
 
-/* Header Styles */
 .app-header {
-  position: fixed; /* Fix the header at the top */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(56px + env(safe-area-inset-top)); /* Adjust height to include safe area */
+  height: 56px;
   padding-top: env(safe-area-inset-top); /* Add padding for the safe area */
-  background-color: #1a1a1a; /* Keep the same dark background */
-  z-index: 1000; /* Ensure it stays above other content */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-padding: 10px 0 25px 0;
+  background-color: #1a1a1a;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  padding: 10px 0 25px 0;
   text-align: center;
 }
 
@@ -61,7 +60,7 @@ padding: 10px 0 25px 0;
 
 /* Section Styles */
 .readings-section {
-  margin-bottom: 40px;
+  padding-bottom: 80px;
 }
 
 .readings-section h2 {
@@ -128,4 +127,48 @@ footer {
   margin-top: 40px;
   font-size: 0.9rem;
   color: #888; /* Muted gray for footer text */
+}
+
+/* Bottom Navigation Styles */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #1a1a1a; /* Match the header's dark background */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #3a3a3a; /* Subtle border for separation */
+  z-index: 1000;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: #eae7dc; /* Light cream text */
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: color 0.3s;
+  outline: none; /* Remove default focus outline */
+}
+
+.nav-button:focus,
+.nav-button:active {
+  color: #d4af37; /* Match the gold accent for active state */
+  background: none; /* Ensure no background color is applied */
+  outline: none; /* Remove any browser-specific focus outline */
+  box-shadow: none; /* Remove any default focus shadow */
+}
+
+.nav-button.active {
+  color: #d4af37; /* Gold accent for the active tab */
+  font-weight: bold;
+}
+
+.nav-button:hover {
+  color: #d4af37; /* Gold accent on hover */
 }
