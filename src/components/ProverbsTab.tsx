@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { getDayOfMonth } from '../shared/utils'; // Import utility function
-import bibleData from '../api/NKJV.bible.json'; // Import the Bible JSON file
+import { getDayOfMonth } from '../shared/utils';
+import bibleData from '../api/NKJV.bible.json';
 
-const typedBibleData = bibleData as BibleData; // Explicitly type the imported data
+const typedBibleData = bibleData as BibleData;
 
 interface Book {
   name: string;
